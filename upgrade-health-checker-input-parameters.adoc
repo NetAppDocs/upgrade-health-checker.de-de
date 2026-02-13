@@ -1,0 +1,400 @@
+---
+sidebar: sidebar 
+permalink: upgrade-health-checker-input-parameters.html 
+keywords: upgrade, health, checker, input, parameter 
+summary: Sie können mehr über die Eingabeparameter für den Upgrade Health Checker erfahren, um Sie bei der Erstellung eines Upgrade-Berichts für Ihren ONTAP Cluster zu unterstützen. 
+---
+= Erfahren Sie mehr über die Eingabeparameter für Upgrade Health Checker
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können mehr über die Eingabeparameter für den Upgrade Health Checker und darüber erfahren, wie Sie diese über CLI-Argumente, Konfigurationsdateien oder interaktive Eingabeaufforderungen bereitstellen, um Sie bei der Erstellung eines Upgrade-Berichts für Ihren ONTAP Cluster zu unterstützen.
+
+
+
+== Priorität der Eingabemethoden
+
+Upgrade Health Checker bietet mehrere Eingabeoptionen für alle Parameter. Die Prioritätsreihenfolge für die Annahme von Eingaben ist:
+
+. CLI arguments (höchste Priorität)
+. Konfigurationsdatei (`config.yaml`)
+. Interaktive Eingabeaufforderungen (niedrigste Priorität)
+
+
+Wenn ein Parameter über mehrere Methoden bereitgestellt wird, verwendet das Tool den Wert aus der Quelle mit der höchsten Priorität.
+
+
+
+== Eingabeparameter
+
+
+
+=== Cluster-IP
+
+Der  `--cluster-ip` Parameter gibt die IP-Adresse oder den Hostnamen des ONTAP Clusters an, zu dem eine Verbindung hergestellt werden soll.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--cluster-ip`
+. Konfigurationsdatei: `CLUSTER.IP`
+. Interaktives Eingabeaufforderungsfenster
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --cluster-ip 192.168.1.100`
+
+* Config.yaml:
++
+[listing]
+----
+CLUSTER:
+  IP: "192.168.1.100"
+----
+* Interaktiver Modus (wenn nicht oben angegeben):
++
+Das Tool wird Sie auffordern: `Enter cluster IP address:`
+
+
+
+====
+
+
+=== Cluster-Benutzername
+
+Der  `--cluster-username` Parameter gibt den Benutzernamen für die Authentifizierung beim ONTAP Cluster an.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--cluster-username`
+. Konfigurationsdatei: `CLUSTER.USERNAME`
+. Interaktives Eingabeaufforderungsfenster
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --cluster-username admin`
+
+* Config.yaml:
++
+[listing]
+----
+CLUSTER:
+  USERNAME: "admin"
+----
+* Interaktiver Modus (wenn nicht oben angegeben):
++
+Das Tool wird Sie auffordern: `Enter cluster username:`
+
+
+
+====
+
+
+=== Clusterpasswort
+
+Der  `--cluster-password` Parameter gibt das Passwort für die Authentifizierung beim ONTAP Cluster an.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--cluster-password`
+. Konfigurationsdatei: `CLUSTER.PASSWORD`
+. Interaktive Eingabeaufforderung (sichere Eingabe)
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI argument (aus Sicherheitsgründen nicht empfohlen):
++
+`./uhc --cluster-password mypassword`
+
+* Config.yaml (stellen Sie sicher, dass die Dateiberechtigungen eingeschränkt sind):
++
+[listing]
+----
+CLUSTER:
+  PASSWORD: "mypassword"
+----
+* Interaktivmodus (empfohlen – Passwort verborgen):
++
+Das Tool wird Sie auffordern: `Enter cluster password:`
+
+
+
+====
+
+
+=== Zielversion von ONTAP
+
+Der  `--target-ontap-version`Parameter gibt die ONTAP Version an, auf die Sie für die Analyse aktualisieren möchten. Verwenden Sie "current", um die bestehende ONTAP Version des Clusters beizubehalten.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--target-ontap-version`
+. Konfigurationsdatei: `CLUSTER.TARGET_ONTAP_VERSION`
+. Interaktives Auswahlmenü
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+Aktualisierte Version von ONTAP: `./uhc --target-ontap-version 9.15.1`
+
++
+Behalten Sie die aktuelle Version von ONTAP: `./uhc --target-ontap-version current`
+
+* Config.yaml:
++
+[listing]
+----
+CLUSTER:
+  TARGET_ONTAP_VERSION: "9.15.1"
+----
+* Interaktiver Modus (wenn nicht oben angegeben):
++
+Das Tool zeigt die verfügbaren Versionen an und fordert zur Auswahl auf
+
+
+
+====
+
+
+=== EULA akzeptieren
+
+Der `--accept-eula` Parameter legt fest, ob die Endbenutzer-Lizenzvereinbarung akzeptiert werden soll. Muss auf `true` gesetzt werden, um fortzufahren.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--accept-eula`
+. Konfigurationsdatei: `CLUSTER.ACCEPT_EULA`
+. Interaktives Eingabeaufforderungsfenster
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --accept-eula true`
+
+* Config.yaml:
++
+[listing]
+----
+CLUSTER:
+  ACCEPT_EULA: true
+----
+* Interaktiver Modus (wenn nicht oben angegeben):
++
+Das Tool zeigt die EULA an und fordert zur Annahme auf
+
+
+
+====
+
+
+=== Pfad der Konfigurationsdatei
+
+Der  `--config-path` Parameter gibt den Pfad zu einer benutzerdefinierten YAML-Konfigurationsdatei an.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--config-path`
+. Standard: `config.yaml`
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --config-path /path/to/custom_config.yaml`
+
+* Standardwert (falls nicht angegeben):
++
+Das Tool sucht im aktuellen Verzeichnis nach der config.yaml
+
+
+
+====
+
+
+=== Ausgabepfad ausführen
+
+Der  `--runs-path` Parameter gibt ein benutzerdefiniertes Verzeichnis zum Speichern von Ausgaben und Berichten an.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--runs-path`
+. Konfigurationsdatei: `APP.RUNS_PATH`
+. Standard: `./runs`
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --runs-path /custom/output/path`
+
+* Config.yaml:
++
+[listing]
+----
+APP:
+  RUNS_PATH: "/custom/output/path"
+----
+* Standardwert (falls nicht angegeben):
++
+Tool verwendet  `./runs` Verzeichnis
+
+
+
+====
+
+
+=== Kompatibilitätsprüfung überspringen
+
+Der  `--skip-compatibility-check` Parameter umgeht die Hardware-Kompatibilitätsprüfungen und verwendet die angegebene Version von ONTAP, auf die Sie aktualisieren möchten.
+
+
+CAUTION: Nutzen Sie diese Option nur, wenn Sie sicher sind, dass die Ziel-ONTAP-Version mit Ihrer Hardware kompatibel ist.
+
+Die Prioritätsreihenfolge für die Bereitstellung dieses Parameters ist:
+
+. CLI-Argument: `--skip-compatibility-check`
+. Konfigurationsdatei: `CLUSTER.SKIP_COMPATIBILITY_CHECK`
+. Standard: `false`
+
+
+.Beispiele
+[%collapsible]
+====
+* CLI-Argument:
++
+`./uhc --skip-compatibility-check true`
+
+* Config.yaml:
++
+[listing]
+----
+CLUSTER:
+  SKIP_COMPATIBILITY_CHECK: true
+----
+
+
+====
+
+
+=== Telemetrie deaktivieren
+
+Um die Telemetrie zu deaktivieren, fügen Sie Folgendes zu Ihrer  `config.yaml` Datei hinzu:
+
+[listing]
+----
+TELEMETRY:
+  ENABLED: false
+----
+
+
+=== Automatische Updates deaktivieren
+
+Um automatische Updates für Upgrade Health Checker zu deaktivieren, fügen Sie Folgendes zu Ihrer  `config.yaml` Datei hinzu:
+
+[listing]
+----
+AUTO_UPDATE:
+  ENABLED: false
+----
+
+
+== Beispiele für die Verwendung jeder Eingabemethode
+
+
+
+=== Kombinierte CLI-Argumente
+
+[listing]
+----
+./uhc \
+  --cluster-ip 192.168.1.100 \
+  --cluster-username admin \
+  --cluster-password mypassword \
+  --target-ontap-version 9.15.1 \
+  --accept-eula true \
+  --config-path /path/to/custom_config.yaml \
+  --runs-path /custom/output \
+  --skip-compatibility-check false
+----
+
+
+=== Config.yaml-Datei
+
+[listing]
+----
+CLUSTER:
+  IP: "192.168.1.100"
+  USERNAME: "admin"
+  PASSWORD: "mypassword"
+  TARGET_ONTAP_VERSION: "9.15.1"
+  ACCEPT_EULA: true
+  SKIP_COMPATIBILITY_CHECK: false
+
+APP:
+  RUNS_PATH: "/custom/output"
+----
+
+
+=== Interaktivmodus
+
+Um alle erforderlichen Eingabeparameter interaktiv abzufragen, führen Sie Upgrade Health Checker ohne Argumente aus:
+
+[source, bash]
+----
+./uhc
+----
+
+
+== Zusätzliche Befehle
+
+Diese Befehle bieten einige zusätzliche Funktionen über die vollständige Ausführung des Tools hinaus:
+
+* Hilfe anzeigen
++
+`./uhc --help`
+
+* Version anzeigen
++
+`./uhc --version`
+
+* Testen Sie die Clusterkonnektivität
++
+`./uhc --test-connectivity cluster`
+
+* Telemetrie-Konnektivität testen
++
+`./uhc --test-connectivity telemetry`
+
+* Testen Sie die Auto-Update-Konnektivität
++
+`./uhc --test-connectivity autoupdate`
+
+* Alle Tests ausführen
++
+`./uhc --test all`
+
+

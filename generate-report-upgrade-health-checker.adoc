@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: generate-report-upgrade-health-checker.html 
+keywords: upgrade, health, checker, report 
+summary: Sie können den Upgrade Health Checker verwenden, um einen Upgrade-Plan für einen oder mehrere ONTAP Cluster zu erstellen. 
+---
+= Upgrade-Plan mit Upgrade Health Checker generieren
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Upgrade Health Checker verwenden, um einen Upgrade-Plan für einen oder mehrere ONTAP Cluster zu erstellen.
+
+Sie können auch link:automate-report-upgrade-health-checker.html["Upgrade-Berichte automatisch generieren"] nutzen, um bei der Pflege aktueller Upgrade-Pläne zu unterstützen, wenn Sie eine große, komplexe Umgebung mit mehreren Clustern haben.
+
+.Bevor Sie beginnen
+Um mehr über einen bestimmten Parameter des Upgrade Health Checkers und die Prioritätsreihenfolge für die Eingabeverarbeitung durch das Tool zu erfahren, siehe link:upgrade-health-checker-input-parameters.html["Erfahren Sie mehr über die Eingabeparameter für Upgrade Health Checker"].
+
+.Schritte
+. Setzen Sie die Ausführungsberechtigung für die Binärdatei, bevor Sie sie zum ersten Mal ausführen:
++
+[source, cli]
+----
+chmod +x uhc
+----
++
+
+NOTE: Upgrade Health Checker ist ein eigenständiges Paket und muss sich vor der Ausführung entpacken. Dies kann einige Sekunden dauern.
+
+. Bevor Sie einen vollständigen Durchlauf des Upgrade Health Checker durchführen, führen Sie eine umfassende Prüfung durch, um sicherzustellen, dass das Tool eine Verbindung zum Cluster und zu den erforderlichen Endpunkten herstellen kann:
++
+[source, cli]
+----
+--test all
+----
++
+Die umfassende Prüfung stellt sicher, dass die virtuelle Maschine, auf der der Upgrade Health Checker gehostet wird, Folgendes aufweist:
+
++
+** Verbindung zur ONTAP Cluster-IP-Adresse über HTTPS
+** Verbindung zum Telemetrie-Endpunkt (https://support.netapp.com/[]) über HTTPS
+** Verbindung zu den Auto-Update-Endpunkten (https://api.uhc.netapp.com[] und https://gql.aiq.netapp.com[]) über HTTPS
+** Mindestens 4 GB verfügbarer `/tmp` Speicherplatz
+
+
+. (Optional) Wenn Sie eine Konfigurationsdatei zum Speichern von Parametern verwenden möchten, benennen Sie die `config.yaml.example` Datei um, die sich am selben Ort befindet, an den Sie die Binärdatei heruntergeladen haben `config.yaml`.
++
+Hier ist ein Beispiel für eine config.yaml-Datei:
+
++
+[listing]
+----
+# Application Configuration
+APP:
+  RUNS_PATH: "/opt/uhc/runs"
+
+# Cluster Credentials
+CLUSTER:
+  IP: "x.x.x.x"
+  USERNAME: "admin"
+  PASSWORD: "xyz"
+  TARGET_ONTAP_VERSION: ""  # Optional: Specify target ONTAP version (e.g., "9.16.1" or "current" to keep existing version). Leave empty to prompt user.
+  ACCEPT_EULA: false  # Optional: Set to true to accept EULA through config. If false/empty, user will be prompted interactively.
+----
+. Führen Sie den Upgrade Health Checker aus, indem Sie die ONTAP-Version eingeben, auf die Sie aktualisieren möchten, und die EULA akzeptieren, einschließlich zusätzlicher Parameter nach Bedarf.
++
+
+NOTE: Die EULA ist ein mehrseitiges Dokument. Geben Sie  `all` ein, um das gesamte Dokument auf einmal anzuzeigen, und geben Sie  `y` ein, um es zu akzeptieren.
+
++
+Nachdem das AutoSupport-Protokoll für einen Cluster heruntergeladen wurde, dauert die Verarbeitung in der Regel ein bis zwei Minuten, abhängig von der Anzahl der Clusterknoten. Da verschiedene ONTAP Softwareversionen die AutoSupport-Erfassung unterschiedlich handhaben, hängt jeder Durchlauf des Upgrade Health Checker von der aktuellen Auslastung des Clusters und der aktuellen ONTAP Version ab.
+
++
+.. Machen Sie sich mit den verfügbaren Parametern des Upgrade Health Checkers, der Eingabeprioritätsreihenfolge und den Standardwerten für bestimmte Parameter vertraut, indem Sie auf link:upgrade-health-checker-input-parameters.html["Erfahren Sie mehr über die Eingabeparameter für Upgrade Health Checker"] verweisen.
++
+Der Leitfaden zu den Eingabeparametern enthält außerdem Informationen zum Festlegen eines benutzerdefinierten Konfigurationsdateipfads und Ausführungspfads, um Ihren Workflow zu optimieren. Die Best Practice ist es, für jeden Cluster ein benutzerdefiniertes Ausgabeverzeichnis zu erstellen, um Ihre Berichte und Protokolle effektiv zu organisieren.
+
+.. Führen Sie den Upgrade Health Checker aus, indem Sie die EULA akzeptieren und die Ziel-ONTAP-Version sowie alle zusätzlichen Parameter eingeben.
++
+[source, cli]
+----
+./uhc
+----
+
+
+. Nachdem der Upgrade Health Checker seine Prüfungen abgeschlossen hat, navigieren Sie zum  `runs` Ordner, um den Upgrade-Plan und den Clusterbericht anzuzeigen.
++
+
+NOTE: Jede Ausführung des Programms ist ein „einzigartiger Lauf“ und hat alle zugehörigen Daten, Protokolle und Ergebnisse im zugehörigen  `runs` Ordner.
+
+. Öffnen Sie die Berichtsdatei (namens  `uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`) in einem Webbrowser, um den Bericht anzuzeigen. Wenn Sie sie auf einem Remote-Host ausführen, laden Sie die Berichtsdatei zunächst auf einen Rechner herunter, auf dem Sie den Bericht in einem Webbrowser anzeigen können.
++
+Der Protokollpfad und der Berichtspfad lauten wie folgt:
+
++
+** Protokollpfad: `<output-path>/<unique-run-dir>/<cluster-name>/logs`
+** Berichtspfad: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`
+
+
+

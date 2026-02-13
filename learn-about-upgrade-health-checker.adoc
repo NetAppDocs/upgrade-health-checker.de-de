@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: learn-about-upgrade-health-checker.html 
+keywords: upgrade, health, checker, ontap 
+summary: Upgrade Health Checker ist ein Upgrade-Beratungsdienst, der detaillierte Informationen und Empfehlungen bereitstellt, um Ihnen bei einem erfolgreichen ONTAP Upgrade zu helfen. 
+---
+= Erfahren Sie mehr über den Upgrade Health Checker
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Upgrade Health Checker ist ein Upgrade-Beratungsdienst, der detaillierte Informationen und Empfehlungen bereitstellt, um Ihnen zu helfen, ein erfolgreiches ONTAP Upgrade durchzuführen. Er führt umfassende Systemprüfungen vor Ort durch, die Blocker und Warnungen identifizieren, die Sie vor der Durchführung eines Upgrades beheben müssen.
+
+Upgrade Health Checker lässt sich in Ihre bestehenden Automatisierungs- und Orchestrierungs-Frameworks integrieren, um Sie bei der Aktualisierung einzelner oder mehrerer Cluster zu unterstützen. Es verwendet Ihre aktuellsten AutoSupport-Daten, um einen detaillierten, präzisen Bericht über die mit Ihren Clustern verbundenen Risiken, Informationen zu neuen Funktionen und Verbesserungen in der ONTAP-Version, auf die Sie aktualisieren, sowie über alle Maßnahmen zu erstellen, die vor dem Versuch eines ONTAP-Upgrades zu ergreifen sind.
+
+Um mehr über Upgrade Health Checker zu erfahren, siehe link:faq-upgrade-health-checker.html["FAQ für Upgrade Health Checker"].
