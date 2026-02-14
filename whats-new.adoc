@@ -17,7 +17,7 @@ Erfahren Sie, was es Neues im Upgrade Health Checker gibt. Zusätzliche Informat
 
 
 
-== 12. Februar 2026
+== 13. Februar 2026
 
 Upgrade Health Checker bietet eine neue Lösung zur Erstellung umfassender Vor-Ort-Berichte, damit Sie ein erfolgreiches ONTAP-Upgrade durchführen können. Es kann mit bestehenden Automatisierungs- und Orchestrierungsframeworks verwendet werden, um die Effizienz beim Upgrade einzelner oder mehrerer Cluster zu steigern. Upgrade Health Checker unterstützt Upgrades auf ONTAP 9.11.1 und höher.
 
