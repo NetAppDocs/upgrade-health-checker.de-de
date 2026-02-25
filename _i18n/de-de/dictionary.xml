@@ -4,7 +4,6 @@
   <block id="851802a6ceccf3253b5814d265b9d85f" category="doc">Automatisieren Sie die Erstellung von Upgrade-Plänen mit Upgrade Health Checker</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
   <block id="bb4632cd1e5a77d2d2a6ad9870b1edf3" category="inline-link-macro">Erstellen Sie einen ONTAP Upgrade-Bericht</block>
-  <block id="cbf0409b66c9c191f2bbf7aebb95c7c6" category="list-text">Um die erfolgreiche Erstellung Ihrer Upgrade-Berichte zu gewährleisten, führen Sie alle erforderlichen Einrichtungsschritte und einmaligen Aufgaben aus, die in <block ref="447f94c751f3bc061f73c40c9324c9a3" category="inline-link-macro-rx"></block> beschrieben sind.</block>
   <block id="7c3f7cf7c460927ff3a0856e45060529" category="list-text">Erstellen Sie ein Skript, um Upgrade Health Checker mit den für Ihre Umgebung geeigneten Parametern auszuführen.</block>
   <block id="4a2fc7904851b98a582cefc5576f3c0b" category="paragraph">Hier ist ein Beispiel für einen Cronjob, der das Tool von Montag bis Freitag um 4 Uhr morgens ausführt. Die Binärdatei und die config.yaml Dateien wurden in /opt/uhc/tool/ installiert.</block>
   <block id="af6a390b44e1466e540d2c134316ae89" category="paragraph">Bash-Skript:</block>
@@ -26,7 +25,6 @@
   <block id="92134baadd628aac9e12056c62e0dc5e" category="paragraph">Upgrade Health Checker-Berichte liefern detaillierte Informationen zu potenziellen Blockern und Warnungen, die vor dem Upgrade Ihrer ONTAP Cluster behoben werden müssen, zu Risiken im Zusammenhang mit Ihren Clustern sowie zu neuen Funktionen und Verbesserungen in der ONTAP Version, auf die Sie upgraden.</block>
   <block id="a17989ff5f0962c2877477c74338ae61" category="section-title">Kann Upgrade Health Checker ohne Internetverbindung verwendet werden?</block>
   <block id="3880fea319e437eea669686be6861626" category="paragraph">Sie benötigen keine Internetverbindung, um den Upgrade Health Checker auszuführen. Er erstellt Upgrade-Pläne und Berichte vor Ort anhand der aktuellen Konfigurationsdaten Ihres ONTAP-Clusters.</block>
-  <block id="a6d52acf3204cc6a87bd7aaed6f3eef7" category="paragraph">Für automatische Tool-Updates ist jedoch ein Internetzugang erforderlich. Wenn Ihre Umgebung keine Internetverbindung hat, wenden Sie sich an NetApp, um Anweisungen zu erhalten, wie Sie sicherstellen können, dass Ihr Upgrade Health Checker-Tool auf dem neuesten Stand bleibt.</block>
   <block id="982d129000c1d3e533f5e8593c670b3d" category="section-title">Welche Versionen von ONTAP werden vom Upgrade Health Checker unterstützt?</block>
   <block id="4c8d49c7d71cf0e79e3740d7cf67dd62" category="paragraph">Upgrade Health Checker unterstützt Upgrades auf ONTAP 9.11.1 und später.</block>
   <block id="b7c89596c79e950e74638e5d75919aee" category="summary">Sie können den Upgrade Health Checker verwenden, um einen Upgrade-Plan für einen oder mehrere ONTAP Cluster zu erstellen.</block>
@@ -232,4 +230,6 @@
   <block id="6ba8c57dc65e01916d692a44ff09f37a" category="sidebar">Eingabeparameter für Upgrade Health Checker</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
   <block id="d8f8bff1a4b83b3c4aa6b4284a2e39c2" category="section-title">13. Februar 2026</block>
+  <block id="f245d5b92eabff0d1c1d1e41530987d0" category="list-text">Um die erfolgreiche Erstellung Ihrer Upgrade-Berichte zu gewährleisten, führen Sie alle erforderlichen Einrichtungsschritte und einmaligen Aufgaben aus, die in <block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block> beschrieben sind.</block>
+  <block id="4a5a50ece5ac2f055b9ecb1ac0f449f2" category="paragraph">Für automatische Tool-Updates ist jedoch ein Internetzugang erforderlich. Falls in Ihrer Umgebung keine Internetverbindung besteht, können Sie die neueste Version des Tools manuell von der Kachel „Upgrade Health Checker“ auf dem <block ref="886a64ecc1d4032be9eb5d1da893e684" category="inline-link-macro-rx"></block> herunterladen.</block>
 </blocks>
