@@ -15,11 +15,20 @@ summary: Sie können den Upgrade Health Checker herunterladen, um vor dem Upgrad
 [role="lead"]
 Sie können den Upgrade Health Checker herunterladen, um vor dem Upgrade auf eine neuere Version von ONTAP umfassende Vor-Ort-Berichte zu erstellen.
 
+.Über diese Aufgabe
+Upgrade Health Checker unterstützt Upgrades für lokale ONTAP Versionen ab 9.11.1. Wenn Sie Cloud Volumes ONTAP verwenden, finden Sie unter link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Upgrade von Cloud Volumes ONTAP"] Informationen zum Upgrade Ihres Systems.
+
 .Bevor Sie beginnen
 Richten Sie eine virtuelle Maschine für Upgrade Health Checker mit den folgenden Spezifikationen ein:
 
 * Verarbeitung und Speicher: m5.large VM oder gleichwertig mit 2 vCPUs und 8 GiB RAM.
-* Empfohlenes Betriebssystem: Ubuntu 22.04 für optimale Kompatibilität.
+* Empfohlenes Betriebssystem: Jedes Linux-Betriebssystem mit glibc Bibliothek Version 2.28 oder höher für optimale Kompatibilität. Dies umfasst:
++
+** Ubuntu 22.04
+** RHEL8
+** RHEL9
+
+
 * Speicher: Stellen Sie ein Root-Volume mit mindestens 100 GB und ein zusätzliches NFS-Volume mit mindestens 100 GB bereit, um die Datenaufbewahrung sicherzustellen, falls die virtuelle Maschine kompromittiert wird.
 * Hosting-Anforderungen: Platzieren Sie die VM an einem Standort mit Clusteranbindung und Internetzugang, um automatische Tool-Updates zu ermöglichen. Die Maschine sollte über HTTPS auf die folgenden Endpunkte zugreifen können, um automatische Updates durchzuführen:
 +
@@ -92,7 +101,7 @@ security login create -user-or-group-name uhctool -role uhctool -application htt
 
 security login create -user-or-group-name uhctool -role uhctool -application ssh -authentication-method password
 ----
-. Richten Sie das Anmeldeinformationsmanagement ein, um den Zugriff auf die Anwendung zu sichern.
+. (Optional) Richten Sie das Anmeldeinformationsmanagement ein, um den Zugriff auf die Anwendung zu sichern.
 +
 Wenn Sie beispielsweise CyberArk und Conjur verwenden, können Sie Ihre Umgebung so konfigurieren, dass Sie Anmeldeinformationen nicht über eine yaml-Datei oder die Befehlszeile übergeben müssen.
 

@@ -17,4 +17,6 @@ Upgrade Health Checker ist ein Upgrade-Beratungsdienst, der detaillierte Informa
 
 Upgrade Health Checker lässt sich in Ihre bestehenden Automatisierungs- und Orchestrierungs-Frameworks integrieren, um Sie bei der Aktualisierung einzelner oder mehrerer Cluster zu unterstützen. Es verwendet Ihre aktuellsten AutoSupport-Daten, um einen detaillierten, präzisen Bericht über die mit Ihren Clustern verbundenen Risiken, Informationen zu neuen Funktionen und Verbesserungen in der ONTAP-Version, auf die Sie aktualisieren, sowie über alle Maßnahmen zu erstellen, die vor dem Versuch eines ONTAP-Upgrades zu ergreifen sind.
 
-Um mehr über Upgrade Health Checker zu erfahren, siehe link:faq-upgrade-health-checker.html["FAQ für Upgrade Health Checker"].
+Um mehr über Upgrade Health Checker zu erfahren, können Sie auf die link:faq-upgrade-health-checker.html["FAQ für Upgrade Health Checker"] verweisen oder sich das folgende Einführungsvideo ansehen.
+
+video::5mwmigXAB9c[youtube]

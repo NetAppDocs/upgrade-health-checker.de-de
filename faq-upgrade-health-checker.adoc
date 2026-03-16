@@ -41,4 +41,4 @@ Für automatische Tool-Updates ist jedoch ein Internetzugang erforderlich. Falls
 
 == Welche Versionen von ONTAP werden vom Upgrade Health Checker unterstützt?
 
-Upgrade Health Checker unterstützt Upgrades auf ONTAP 9.11.1 und später.
+Upgrade Health Checker unterstützt Upgrades für On-Premises ONTAP 9.11.1 und später.
