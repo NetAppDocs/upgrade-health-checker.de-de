@@ -58,13 +58,15 @@ Cron-Job:
 
 NOTE: Jede Ausführung des Programms ist ein einzigartiger Durchlauf und hat alle zugehörigen Daten, Protokolle und Ergebnisse im zugehörigen  `runs` Ordner.
 
-. Öffnen Sie die Berichtsdatei (mit dem Namen `uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`) in einem Webbrowser, um den Bericht anzuzeigen. Wenn Sie Upgrade Health Checker auf einem Remote-Host ausführen, laden Sie die Berichtsdatei zunächst auf einen Rechner herunter, auf dem Sie sie in einem Webbrowser anzeigen können.
+. Öffnen Sie die Berichtsdatei (mit dem Namen  `uhc_<cluster-name>_<YYYYMMDDHHMMSS>`) in einem Webbrowser, Microsoft Excel oder einem JSON-Viewer, um den Bericht anzuzeigen. Wenn Sie Upgrade Health Checker auf einem Remote-Host ausführen, laden Sie die Berichtsdatei zunächst auf einen Rechner herunter, auf dem Sie den Bericht in einem Webbrowser, in Excel oder in einem JSON-Viewer anzeigen können.
 +
 Der Protokollpfad und der Berichtspfad lauten wie folgt:
 
 +
 ** Protokollpfad: `<output-path>/<unique-run-dir>/<cluster-name>/logs`
-** Berichtspfad: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`
+** HTML-Berichtspfad: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.html`
+** Excel-Berichtspfad: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.xlsx`
+** JSON-Berichtspfad: `<output-path>/<unique-run-dir>/<cluster-name>/results/uhc_<cluster-name>_<YYYYMMDDHHMMSS>.json`
 
 
 
