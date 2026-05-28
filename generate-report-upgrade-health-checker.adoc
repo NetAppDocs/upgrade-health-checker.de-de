@@ -45,8 +45,8 @@ Die umfassende Prüfung stellt sicher, dass die virtuelle Maschine, auf der der 
 
 +
 ** Verbindung zur ONTAP Cluster-IP-Adresse über HTTPS
-** Verbindung zum Telemetrie-Endpunkt (https://support.netapp.com/[] und https://api.activeiq.netapp.com[]) über HTTPS
-** Verbindung zu den automatischen Update-Endpunkten (https://api.uhc.netapp.com[], https://gql.aiq.netapp.com[], und https://api.activeiq.netapp.com[]) über HTTPS (443)
+** Verbindung zum Telemetrie-Endpunkt (+https://support.netapp.com/+ und +https://api.activeiq.netapp.com+) über HTTPS
+** Verbindung zu den automatischen Aktualisierungsendpunkten (+https://api.uhc.netapp.com+, +https://gql.aiq.netapp.com+ und +https://api.activeiq.netapp.com+) über HTTPS (443)
 ** Mindestens 4 GB verfügbarer `/tmp` Speicherplatz
 
 

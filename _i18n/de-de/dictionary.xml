@@ -74,8 +74,6 @@
   <block id="55dcd8cbc9d164986479594db66fd89e" category="paragraph">Richten Sie eine virtuelle Maschine für Upgrade Health Checker mit den folgenden Spezifikationen ein:</block>
   <block id="cf0860ffd4dc1929d768f74d92735b75" category="list-text">Verarbeitung und Speicher: m5.large VM oder gleichwertig mit 2 vCPUs und 8 GiB RAM.</block>
   <block id="28a03eb4af7c5f6abf99620ada6c6cfb" category="list-text">Speicher: Stellen Sie ein Root-Volume mit mindestens 100 GB und ein zusätzliches NFS-Volume mit mindestens 100 GB bereit, um die Datenaufbewahrung sicherzustellen, falls die virtuelle Maschine kompromittiert wird.</block>
-  <block id="072b499eacb5befcbdab2d6cc0fe02a0" category="list-text"><block ref="072b499eacb5befcbdab2d6cc0fe02a0" category="inline-link-rx"></block></block>
-  <block id="53fb0fc7c544c164b74ed43fbccd4384" category="list-text"><block ref="53fb0fc7c544c164b74ed43fbccd4384" category="inline-link-rx"></block></block>
   <block id="907609b93268ffb2d43f03dae5c950a3" category="paragraph">Falls kein Internetzugang verfügbar ist, wenden Sie sich an NetApp für Anweisungen.</block>
   <block id="ad9d14ce6f324c6a7d87f50e2b156ad7" category="list-text">Empfohlene Pakete: Installieren Sie einen Webserver, um den Zugriff zu erleichtern.</block>
   <block id="513157ecd257a5ac15a2bf664400f97e" category="inline-link-macro">Navigieren zum NetApp Console Automation Hub</block>
@@ -235,18 +233,20 @@
   <block id="e1b8614301d7bec3825b94f88f799128" category="list-text">HTML-Berichtspfad:<block ref="42dfa52dc698f1548746e65dadae2dba" prefix=" " category="inline-code"></block></block>
   <block id="38fda984a0c5a847814d8f79ebf27b47" category="list-text">Excel-Berichtspfad:<block ref="b579a006aab9674bb4b5ee8bdc1dc5a8" prefix=" " category="inline-code"></block></block>
   <block id="82e19305023b5eb3613e715db77f833c" category="list-text">JSON-Berichtspfad:<block ref="fa32c5a3f7d651976fb4d5ab4d04b0b0" prefix=" " category="inline-code"></block></block>
-  <block id="6dd1c9daa4dc12fc30a473b455c79963" category="list-text">Verbindung zum Telemetrie-Endpunkt <block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block> und<block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>) über HTTPS</block>
-  <block id="2337a5c21840ff98faafc2454e42e258" category="list-text">Verbindung zu den automatischen Update-Endpunkten <block ref="7b0c3a92f481d16df4dd5efff5f61700" category="inline-link-rx"></block>,<block ref="75a282c90668bc1468d683bacd2cabd2" category="inline-link-rx"></block>, und<block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block>) über HTTPS (443)</block>
   <block id="c9222608750e8dc2e14567da95cc5574" category="list-text">Öffnen Sie die Berichtsdatei (mit dem Namen <block ref="781e82a34e84af3b11fccec6b813c654" prefix=" " category="inline-code"></block>) in einem Webbrowser, Microsoft Excel oder einem JSON-Viewer, um den Bericht anzuzeigen. Wenn Sie sie auf einem Remote-Host ausführen, laden Sie die Berichtsdatei zunächst auf einen Rechner herunter, auf dem Sie den Bericht in einem Webbrowser, in Excel oder in einem JSON-Viewer anzeigen können.</block>
   <block id="23f77c02d4b9cce31928ac38c3a2b6f9" category="list-text">Hosting-Anforderungen: Platzieren Sie die VM an einem Standort mit Clusteranbindung und Internetzugang, um automatische Tool-Updates zu ermöglichen. Die Maschine sollte über HTTPS (443) auf die folgenden Endpunkte zugreifen können, um automatische Updates durchzuführen:</block>
-  <block id="1e149c7d9ce6dc9e42acefe98045ece8" category="list-text"><block ref="1e149c7d9ce6dc9e42acefe98045ece8" category="inline-link-rx"></block></block>
-  <block id="d100bb5092fa91acd1332279f9e39144" category="paragraph">Stellen Sie außerdem sicher, dass die virtuelle Maschine eine Verbindung zum Telemetrie-Endpunkt <block ref="dff1129755a63688cdc5de28dfe608ad" category="inline-link-rx"></block> und <block ref="b6e65db6bdd125b2fca849ddf715a294" category="inline-link-rx"></block> über HTTPS herstellen kann, um NetApp AutoSupport Informationen über Ihre Upgrade-Pläne zu erhalten.</block>
   <block id="ef442759af12bb34136648bc4519a80c" category="section-title">15. April 2026</block>
   <block id="46f2cb9a84a7af28bc6cd48700cc9900" category="paragraph">Dieses Update der Dokumentation zum Upgrade Health Checker umfasst die folgenden Funktionen.</block>
-  <block id="ad88b0b80ee104829693617a9bf958bd" category="list-text">UHC benötigt Zugriff auf einen neuen Endpunkt <block ref="7284fbd648a23f7bd89ffe1d29d304e6" category="inline-link-rx"></block>) damit die automatischen Update-Funktionen funktionieren.</block>
   <block id="e1a2132b8b37788de7f02a2417b9fb84" category="paragraph"><block ref="818545cfdb8752d4fd7459b5cbb30ef7" category="inline-link-macro-rx"></block>.</block>
   <block id="b729a38666412b046926504f8c6e0c22" category="list-text">UHC bietet nun ein neues Berichtsformat (.XLSX - von Menschen bearbeitbar) an, das die Formate HTML (von Menschen lesbar) und JSON (maschinenlesbar) ergänzt.</block>
   <block id="28644c8986780297cc12f67e6e53c6e9" category="paragraph"><block ref="6489edbb98d22789fa797cea6950f9bd" category="inline-link-macro-rx"></block>.</block>
   <block id="188972059fe3b72a4a06d5b2f9a9f5e8" category="paragraph"><block ref="2351634b2585980a03146a4b76c86b91" category="inline-link-macro-rx"></block>.</block>
   <block id="14bcc4201c40840cb4def541b49a3f32" category="sidebar">Erste Schritte mit dem Upgrade Health Checker mithilfe von NetApp Lab on Demand</block>
+  <block id="9878135fc061d82ca23d024a73b70f17" category="list-text">Verbindung zum Telemetrie-Endpunkt (+https://support.netapp.com/+ und +https://api.activeiq.netapp.com+) über HTTPS</block>
+  <block id="8e902ec9dc6816d99e16bdee4a2eed46" category="list-text">Verbindung zu den automatischen Aktualisierungsendpunkten (+https://api.uhc.netapp.com+, +https://gql.aiq.netapp.com+ und +https://api.activeiq.netapp.com+) über HTTPS (443)</block>
+  <block id="6004dfc86627bd24fdacdda35ddd16c3" category="list-text">+https://api.uhc.netapp.com+</block>
+  <block id="375ac624794a2a89bd6c16e9b07a6656" category="list-text">+https://gql.aiq.netapp.com+</block>
+  <block id="0cf9833b48d6a8ca87c343c5a45e4e84" category="list-text">+https://api.activeiq.netapp.com+</block>
+  <block id="527e62c9953c2bebba6b642861ac2fd8" category="paragraph">Stellen Sie außerdem sicher, dass die virtuelle Maschine über HTTPS eine Verbindung zum Telemetrie-Endpunkt (+https://support.netapp.com+/ und +https://api.activeiq.netapp.com+) herstellen kann, damit NetApp AutoSupport-Informationen über Ihre Upgrade-Pläne erhalten kann.</block>
+  <block id="7da7d55bf35c61004edeb6d3b68a9970" category="list-text">UHC benötigt Zugriff auf einen neuen Endpunkt (+https://api.activeiq.netapp.com+), damit die automatischen Update-Funktionen funktionieren.</block>
 </blocks>
