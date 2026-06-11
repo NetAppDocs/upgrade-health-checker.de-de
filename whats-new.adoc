@@ -1,5 +1,5 @@
 ---
-sidebar: sidebar 
+sidebar: sidebarU 
 permalink: whats-new.html 
 keywords: upgrade, health, checker, whats new, release, notes 
 summary: Erfahren Sie, was es Neues auf dieser Doc-Website gibt. 
@@ -13,7 +13,39 @@ summary: Erfahren Sie, was es Neues auf dieser Doc-Website gibt.
 
 
 [role="lead"]
-Erfahren Sie, was es Neues im Upgrade Health Checker gibt. Zusätzliche Informationen zu Verbesserungen finden Sie, indem Sie zur Upgrade Health Checker-Kachel in der link:https://console.netapp.com/automationHub["NetApp Console Automation Hub"^] navigieren und die neuesten Upgrade Health Checker-Download-Dateien ansehen.
+Erfahren Sie mehr über die Neuerungen im Upgrade Health Checker (UHC). Weitere Informationen zu den Verbesserungen finden Sie, indem Sie zur Kachel „Upgrade Health Checker“ in der link:https://console.netapp.com/automationHub["NetApp Console Automation Hub"^] navigieren und die neuesten Download-Dateien für den Upgrade Health Checker ansehen.
+
+
+
+== 11. Juni 2026
+
+Dieses Update der Dokumentation zum Upgrade Health Checker umfasst die folgenden Funktionen.
+
+* UHC unterstützt die direkte Zustellung von Berichten an Ihren Posteingang.
++
+link:setup-email-upgrade-health-checker.html["Erhalten Sie Upgrade Health Checker-Berichte per E-Mail"].
+
+* Führt den  `--dashboard`Parameter ein, der das Dashboard aus bestehenden Ausführungen bei `<runs>/dashboard/index.html` neu generiert, ohne einen Cluster zu kontaktieren. Es bietet einen Überblick auf hoher Ebene über den Zustand aller Cluster, auf die kürzlich zugegriffen wurde.
++
+link:dashboard-upgrade-health-checker.html["Upgrade Health Checker-Dashboard"], link:upgrade-health-checker-input-parameters.html#dashboard["Dashboard-Parameter"].
+
+* Führt einen neuen Abschnitt mit den Themen Wartung, Fehlerbehebung und häufig gestellte Fragen (FAQ) ein.
++
+** Halten Sie Upgrade Health Checker in Schuss, indem Sie regelmäßig nach Updates suchen, die Protokolle auf wiederkehrende Probleme überwachen und sicherstellen, dass das Tool korrekt für Ihre Umgebung konfiguriert ist.
++
+link:maintain-upgrade-health-checker.html["Upgrade Health Checker beibehalten"].
+
+** Beheben Sie häufig auftretende Probleme des Upgrade Health Checkers und beheben Sie Fehler, die die ONTAP-Upgrade-Planung blockieren können.
++
+link:troubleshoot-upgrade-health-checker.html["Fehlerbehebung beim Upgrade-Integritätscheck"].
+
+** Häufig gestellte Fragen (FAQ) für Upgrade Health Checker.
++
+link:faq-upgrade-health-checker.html["FAQ für Upgrade Health Checker"].
+
+
+
+
 
 
 

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: setup-email-upgrade-health-checker.html 
+keywords: upgrade, health, checker 
+summary: Sie können E-Mails einrichten, um Berichte des Upgrade Health Checkers zu erhalten. 
+---
+= Erhalten Sie Upgrade Health Checker-Berichte per E-Mail
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können E-Mails in Upgrade Health Checker integrieren, um Berichte in Ihrem Posteingang zu erhalten. Sie aktivieren diese Funktion über die Datei config.yaml oder ein Befehlszeilenargument. Wenn aktiviert, sendet Upgrade Health Checker die generierten Berichte (HTML, Excel oder JSON) an einen oder mehrere konfigurierte Empfänger über einen SMTP-Server. Wenn die Funktion deaktiviert ist, werden keine Berichte gesendet. Wenn die Berichtserstellung fehlschlägt und E-Mail aktiviert ist, werden die Protokolldateien an die konfigurierten Empfänger gesendet.
+
+
+
+== Konfigurieren Sie die Datei config.yaml.
+
+. Aktivieren Sie E-Mail-Berichte in der config.yaml-Datei.
++
+[listing]
+----
+# Email Report Configuration
+EMAIL:
+  ENABLED: true
+----
+. Bitte geben Sie die SMTP-Konfigurationseinstellungen zusammen mit den Absenderdetails und dem Betreff an:
++
+[listing]
+----
+# SMTP Server Configuration
+EMAIL:
+  ENABLED: true
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [<port-number>]
+----
+. Geben Sie die E-Mail-Adressen der Empfänger an und konfigurieren Sie, welche Berichtsformate per E-Mail versendet werden sollen, z. B. HTML, EXCEL, JSON, ALL:
++
+[listing]
+----
+# Recipient Email Addresses, report formats
+EMAIL:
+  ENABLED: true
+  TO: <recipient>
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  RECIPIENTS: "user1@example.com, user2@example.com"
+  REPORT_FORMATS: "HTML,EXCEL,JSON"   # valid values: HTML, EXCEL, JSON or ALL
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [PORT]
+----
+
+
+
+
+== Konfiguration mit Befehlszeilenargumenten
+
+. E-Mail-Berichte mithilfe von Befehlszeilenargumenten aktivieren:
++
+[listing]
+----
+./uhc --email-enabled=true
+----
+. E-Mail-Adressen der Empfänger angeben:
++
+[listing]
+----
+./uhc --email-recipients="user1@example.com, user2@example.com"
+----
+. Konfigurieren Sie, welche Berichtsformate per E-Mail versendet werden, z. B. HTML, EXCEL, JSON:
++
+[listing]
+----
+./uhc --email-report-formats=HTML,EXCEL,JSON
+----
+
+
+[NOTE]
+====
+Die folgenden drei Attribute können sowohl über Befehlszeilenargumente als auch über die Datei config.yaml konfiguriert werden; die übrigen Attribute sind nur in der Datei config.yaml konfigurierbar:
+
+* E-Mail-fähig
+* E-Mail-Empfänger
+* E-Mail-Berichtsformate
+
+
+Beachten Sie, dass, wenn Befehlszeilenargumente angegeben werden, diese die Werte in der config.yaml-Datei überschreiben.
+
+Beispiel:
+
+[listing]
+----
+./uhc \
+  --email-enabled=true
+  --email-recipients="user1@example.com, user2@example.com" \
+  --email-report-formats=HTML,EXCEL,JSON \
+----
+[listing]
+----
+EMAIL:
+  FROM: "uhc-notify@example.com"
+  SUBJECT: "UHC Upgrade Health Report"
+  REPLY_TO: <email>
+  SMTP:
+    HOST: "smtp.example.com"
+    PORT: [PORT]
+----
+====

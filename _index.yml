@@ -13,6 +13,8 @@ indexpage:
       url: learn-about-upgrade-health-checker.html
     - title: Upgrade Health Checker einrichten
       url: set-up-upgrade-health-checker.html
+    - title: Erfahren Sie mehr über die Eingabeparameter für Upgrade Health Checker
+      url: upgrade-health-checker-input-parameters.html
   - title: Upgrade Health Checker verwenden
     links:
     - title: Erstellen Sie einen ONTAP Upgrade-Bericht
@@ -21,10 +23,12 @@ indexpage:
       url: automate-report-upgrade-health-checker.html
   - title: Weitere Ressourcen
     links:
-    - title: Erfahren Sie mehr über die Eingabeparameter für Upgrade Health Checker
-      url: upgrade-health-checker-input-parameters.html
     - title: Erste Schritte mit dem Upgrade Health Checker mithilfe von NetApp Lab
         on Demand
       url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Getting-Started-with-Upgrade-Health-Checker-Using-NetApp-Lab-on-Demand/ba-p/466818
+    - title: Upgrade Health Checker beibehalten
+      url: maintain-upgrade-health-checker.html
+    - title: Fehlerbehebung beim Upgrade-Integritätscheck
+      url: troubleshoot-upgrade-health-checker.html
     - title: FAQ für Upgrade Health Checker
       url: faq-upgrade-health-checker.html

@@ -95,6 +95,10 @@ Der Leitfaden zu den Eingabeparametern enthält außerdem Informationen zum Fest
 
 NOTE: Jede Ausführung des Programms ist ein „einzigartiger Lauf“ und hat alle zugehörigen Daten, Protokolle und Ergebnisse im zugehörigen  `runs` Ordner.
 
+. Liste der generierten Berichtsdateien:
++
+`ls -lrt`
+
 . Öffnen Sie die Berichtsdatei (mit dem Namen  `uhc_<cluster-name>_<YYYYMMDDHHMMSS>`) in einem Webbrowser, Microsoft Excel oder einem JSON-Viewer, um den Bericht anzuzeigen. Wenn Sie sie auf einem Remote-Host ausführen, laden Sie die Berichtsdatei zunächst auf einen Rechner herunter, auf dem Sie den Bericht in einem Webbrowser, in Excel oder in einem JSON-Viewer anzeigen können.
 +
 Der Protokollpfad und der Berichtspfad lauten wie folgt:
@@ -107,3 +111,6 @@ Der Protokollpfad und der Berichtspfad lauten wie folgt:
 
 
 
+
+.Was kommt als Nächstes
+Nachdem Sie Ihren Upgrade-Plan und den Clusterbericht generiert haben, können Sie die link:dashboard-upgrade-health-checker.html["Upgrade Health Checker-Dashboard"] für Details zum Gesundheitszustand der während des Laufs bewerteten Cluster einsehen.
