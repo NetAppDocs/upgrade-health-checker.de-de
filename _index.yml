@@ -19,8 +19,12 @@ indexpage:
     links:
     - title: Erstellen Sie einen ONTAP Upgrade-Bericht
       url: generate-report-upgrade-health-checker.html
+    - title: Upgrade Health Checker-Dashboard
+      url: dashboard-upgrade-health-checker.html
     - title: Berichtserstellung automatisieren
       url: automate-report-upgrade-health-checker.html
+    - title: Berichte per E-Mail empfangen
+      url: setup-email-upgrade-health-checker.html
   - title: Weitere Ressourcen
     links:
     - title: Erste Schritte mit dem Upgrade Health Checker mithilfe von NetApp Lab

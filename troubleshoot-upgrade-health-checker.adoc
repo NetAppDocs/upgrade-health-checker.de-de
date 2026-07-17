@@ -17,12 +17,14 @@ Erfahren Sie, wie Sie häufig auftretende Probleme mit dem Upgrade Health Checke
 
 
 
+[[troubleshoot-issues]]
 == Fehlerbehebung bei Problemen
 
 {empty} + {empty}
 
 
 
+[[issue-authentication-or-credential-errors]]
 === Problem: Authentifizierungs- oder Berechtigungsfehler
 
 *Symptome:*
@@ -50,6 +52,7 @@ Diese Fehler weisen darauf hin, dass Upgrade Health Checker sich mit den angegeb
 
 
 
+[[issue-auto-update-fails]]
 === Problem: Automatische Aktualisierung schlägt fehl
 
 *Symptome:*
@@ -81,6 +84,7 @@ df -h <location of uhc>
 
 
 
+[[issue-binary-takes-a-long-time-to-start]]
 === Problem: Die Binärdatei benötigt lange zum Starten
 
 *Ursache:* Die Binärdatei ist in sich abgeschlossen und muss sich vor der Ausführung selbst entpacken.
@@ -89,6 +93,7 @@ df -h <location of uhc>
 
 
 
+[[issue-permission-denied-or-cannot-execute-binary-on-tmp]]
 === Problem: „Zugriff verweigert“ oder „Binärdatei kann nicht ausgeführt werden“ auf /tmp
 
 *Symptome:*
@@ -139,6 +144,7 @@ NOTE: Für diese Problemumgehung muss der benutzerdefinierte Pfad zunächst exis
 
 
 
+[[issue-connection-timeout]]
 === Problem: Zeitüberschreitung bei der Verbindung
 
 *Symptome:*
@@ -157,6 +163,7 @@ Request timeout
 
 
 
+[[issue-insufficient-disk-space]]
 === Problem: Unzureichender Speicherplatz
 
 *Symptome:*
@@ -196,6 +203,7 @@ rm -rf /tmp/_MEI*
 
 
 
+[[issue-invalid-runs-path]]
 === Problem: Ungültiger Ausführungspfad
 
 *Symptome:*
@@ -215,6 +223,7 @@ Cannot create tarball: basepath_runs '<path>' does not exist
 
 
 
+[[issue-invalid-target-ontap-version]]
 === Problem: Ungültige ONTAP Zielversion
 
 *Symptome:*
@@ -234,6 +243,7 @@ Downgrade is not supported. Target version must be greater than or equal to the 
 
 
 
+[[issue-signature-verification-fails]]
 === Problem: Signaturprüfung schlägt fehl
 
 *Symptome:*
@@ -261,6 +271,7 @@ openssl dgst -sha256 -verify UHC-Linux-public.pub -signature uhc.sig uhc
 
 
 
+[[issue-telemetry-upload-failure]]
 === Problem: Fehler beim Hochladen der Telemetriedaten
 
 *Symptome:*
@@ -283,6 +294,7 @@ Telemetry endpoint is not reachable
 
 
 
+[[issue-update-in-progress-lock-file]]
 === Problem: Sperrdatei „UPDATE IN PROGRESS“
 
 *Symptome:*

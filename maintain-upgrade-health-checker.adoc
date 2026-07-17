@@ -17,6 +17,7 @@ Halten Sie Upgrade Health Checker in Schuss, indem Sie regelmäßig nach Updates
 
 
 
+[[tmp-space-management]]
 == /tmp Speicherplatzmanagement
 
 Upgrade Health Checker extrahiert seine Komponenten in das `/tmp` Verzeichnis während der Ausführung. Wenn Sie auf Probleme im Zusammenhang mit unzureichendem Speicherplatz in `/tmp` stoßen, beachten Sie Folgendes:
@@ -27,6 +28,7 @@ Upgrade Health Checker extrahiert seine Komponenten in das `/tmp` Verzeichnis w�
 
 
 
+[[run-directory-cleanup]]
 == Verzeichnisbereinigung ausführen
 
 Upgrade Health Checker erstellt für jede Ausführung ein einzigartiges Ausführungsverzeichnis, das Protokolle und Ergebnisse enthält. Um Speicherplatz zu verwalten, konfigurieren Sie einen automatisierten Bereinigungsprozess, um alte Ausführungsverzeichnisse nach einer bestimmten Zeit, zum Beispiel 30 Tagen, zu entfernen.
@@ -41,6 +43,7 @@ find /mnt/nfs/uhc/runs -type d -mtime +30 -exec rm -rf {} + 2>/dev/null
 ----
 
 
+[[automatic-updates]]
 == Automatische Updates
 
 Upgrade Health Checker sucht nach jedem Durchlauf automatisch nach Updates, sofern eine Internetverbindung besteht. So erhalten Sie stets die neuesten Funktionen, Verbesserungen und Fehlerbehebungen. Wenn kein Internetzugang besteht, können Sie die neueste Version manuell von der link:https://console.netapp.com/automationHub["NetApp Console Automation Hub"^] herunterladen.

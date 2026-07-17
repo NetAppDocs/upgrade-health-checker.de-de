@@ -1,5 +1,5 @@
 ---
-sidebar: sidebarU 
+sidebar: sidebar 
 permalink: whats-new.html 
 keywords: upgrade, health, checker, whats new, release, notes 
 summary: Erfahren Sie, was es Neues auf dieser Doc-Website gibt. 
@@ -17,9 +17,24 @@ Erfahren Sie mehr über die Neuerungen im Upgrade Health Checker (UHC). Weitere 
 
 
 
+[[17-july-2026]]
+== 17. Juli 2026
+
+Dieses Update beinhaltet zahlreiche Verbesserungen, darunter ein Dashboard zur Flottenrisikoanalyse, Unterstützung für E-Mail-Authentifizierung und -Verschlüsselung, Berichte zur Laufwerksanzahl, Unterstützung für empfohlene ONTAP-Versionen sowie IMT-Prüfungen für NAS und SAN.
+
+* UHC Dashboard: *Fleet Risk*-Ansicht jetzt verfügbar
+* E-Mail Integration: Unterstützung für einen E-Mail Server mit Authentifizierung und Verschlüsselung
+* *Laufwerksanzahl* in der Clusterübersicht im Bericht hinzugefügt
+* Empfohlene ONTAP Version jetzt unterstützt
+* Unterstützung für NAS und SAN IMT-Prüfungen hinzugefügt
+
+
+
+
+[[11-june-2026]]
 == 11. Juni 2026
 
-Dieses Update der Dokumentation zum Upgrade Health Checker umfasst die folgenden Funktionen.
+Dieses Update beinhaltet die Zustellung von Berichten per E-Mail, einen Dashboard-Parameter für schnelle Statusübersichten sowie neue Dokumentationsabschnitte, um die Wartung und Fehlerbehebung des Upgrade Health Checker zu unterstützen.
 
 * UHC unterstützt die direkte Zustellung von Berichten an Ihren Posteingang.
 +
@@ -31,7 +46,7 @@ link:dashboard-upgrade-health-checker.html["Upgrade Health Checker-Dashboard"], 
 
 * Führt einen neuen Abschnitt mit den Themen Wartung, Fehlerbehebung und häufig gestellte Fragen (FAQ) ein.
 +
-** Halten Sie Upgrade Health Checker in Schuss, indem Sie regelmäßig nach Updates suchen, die Protokolle auf wiederkehrende Probleme überwachen und sicherstellen, dass das Tool korrekt für Ihre Umgebung konfiguriert ist.
+** Upgrade Health Checker wird auf dem neuesten Stand gehalten, indem nach Updates gesucht, Protokolle auf wiederkehrende Probleme überwacht und überprüft wird, ob das Tool korrekt konfiguriert ist.
 +
 link:maintain-upgrade-health-checker.html["Upgrade Health Checker beibehalten"].
 
@@ -49,11 +64,12 @@ link:faq-upgrade-health-checker.html["FAQ für Upgrade Health Checker"].
 
 
 
+[[15-april-2026]]
 == 15. April 2026
 
-Dieses Update der Dokumentation zum Upgrade Health Checker umfasst die folgenden Funktionen.
+Dieses Update fügt ein neues XLSX Berichtsformat hinzu und erfordert den Zugriff auf einen neuen Endpunkt, damit automatische Updates funktionieren.
 
-* UHC benötigt Zugriff auf einen neuen Endpunkt (+https://api.activeiq.netapp.com+), damit die automatischen Update-Funktionen funktionieren.
+* Sie müssen UHC Zugriff auf einen neuen Endpunkt (+https://api.activeiq.netapp.com+) gewähren, damit die automatischen Aktualisierungsfunktionen funktionieren.
 +
 link:set-up-upgrade-health-checker.html["Upgrade Health Checker herunterladen und einrichten"].
 
@@ -68,8 +84,9 @@ link:automate-report-upgrade-health-checker.html["Automatisieren Sie die Erstell
 
 
 
+[[13-february-2026]]
 == 13. Februar 2026
 
-Upgrade Health Checker bietet eine neue Lösung zur Erstellung umfassender Vor-Ort-Berichte, damit Sie ein erfolgreiches ONTAP-Upgrade durchführen können. Es kann mit bestehenden Automatisierungs- und Orchestrierungsframeworks verwendet werden, um die Effizienz beim Upgrade einzelner oder mehrerer Cluster zu steigern. Upgrade Health Checker unterstützt Upgrades auf ONTAP 9.11.1 und höher.
+Upgrade Health Checker ist jetzt verfügbar. Dieses Tool generiert detaillierte Berichte vor Ort, um ein erfolgreiches ONTAP Upgrade zu ermöglichen. Upgrade Health Checker kann mit bestehenden Automatisierungs- und Orchestrierungs-Frameworks verwendet werden, um Zeit beim Upgrade einzelner oder mehrerer Cluster zu sparen. Upgrade Health Checker unterstützt Upgrades auf ONTAP 9.11.1 und höher.
 
 link:learn-about-upgrade-health-checker.html["Erfahren Sie mehr über Upgrade Health Checker"].

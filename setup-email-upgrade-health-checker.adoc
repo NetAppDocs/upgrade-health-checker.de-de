@@ -13,11 +13,14 @@ summary: Sie können E-Mails einrichten, um Berichte des Upgrade Health Checkers
 
 
 [role="lead"]
-Sie können E-Mails in Upgrade Health Checker integrieren, um Berichte in Ihrem Posteingang zu erhalten. Sie aktivieren diese Funktion über die Datei config.yaml oder ein Befehlszeilenargument. Wenn aktiviert, sendet Upgrade Health Checker die generierten Berichte (HTML, Excel oder JSON) an einen oder mehrere konfigurierte Empfänger über einen SMTP-Server. Wenn die Funktion deaktiviert ist, werden keine Berichte gesendet. Wenn die Berichtserstellung fehlschlägt und E-Mail aktiviert ist, werden die Protokolldateien an die konfigurierten Empfänger gesendet.
+Upgrade Health Checker kann Berichte direkt an Ihren Posteingang senden. Diese Funktion kann über die Datei config.yaml oder ein Befehlszeilenargument aktiviert werden. Wenn aktiviert, sendet Upgrade Health Checker generierte Berichte (HTML, Excel oder JSON) über einen SMTP-Server an einen oder mehrere Empfänger. Wenn deaktiviert, werden keine Berichte gesendet. Wenn die Berichtserstellung fehlschlägt und der E-Mail-Versand aktiviert ist, sendet Upgrade Health Checker die Protokolldateien an die konfigurierten Empfänger.
 
 
 
+[[configure-using-the-config-yaml-file]]
 == Konfigurieren Sie die Datei config.yaml.
+
+Sie können die E-Mail-Einstellungen in der Datei config.yaml konfigurieren, indem Sie E-Mail-Berichte aktivieren, SMTP-Serverdetails hinzufügen und Empfängeradressen sowie Berichtsformate angeben.
 
 . Aktivieren Sie E-Mail-Berichte in der config.yaml-Datei.
 +
@@ -27,7 +30,7 @@ Sie können E-Mails in Upgrade Health Checker integrieren, um Berichte in Ihrem 
 EMAIL:
   ENABLED: true
 ----
-. Bitte geben Sie die SMTP-Konfigurationseinstellungen zusammen mit den Absenderdetails und dem Betreff an:
+. Die SMTP-Konfigurationseinstellungen, die Absenderdetails und den Betreff hinzufügen:
 +
 [listing]
 ----
@@ -41,7 +44,7 @@ EMAIL:
     HOST: "smtp.example.com"
     PORT: [<port-number>]
 ----
-. Geben Sie die E-Mail-Adressen der Empfänger an und konfigurieren Sie, welche Berichtsformate per E-Mail versendet werden sollen, z. B. HTML, EXCEL, JSON, ALL:
+. Fügen Sie die E-Mail-Adressen der Empfänger hinzu und legen Sie fest, welche Berichtsformate das System per E-Mail versendet, zum Beispiel HTML, EXCEL, JSON oder ALL. Auch Authentifizierung und Verschlüsselung sind möglich:
 +
 [listing]
 ----
@@ -57,12 +60,20 @@ EMAIL:
   SMTP:
     HOST: "smtp.example.com"
     PORT: [PORT]
+    USE_SMTP_AUTH: true
+    USE_TLS: true
+    USE_SSL: true
+    USERNAME: "user@example.com"
+    PASSWORD: "********"
 ----
 
 
 
 
+[[configure-using-command-line-arguments]]
 == Konfiguration mit Befehlszeilenargumenten
+
+Grundlegende E-Mail-Einstellungen lassen sich mithilfe von Befehlszeilenargumenten konfigurieren, um Berichte zu aktivieren, Empfänger anzugeben und Berichtsformate auszuwählen.
 
 . E-Mail-Berichte mithilfe von Befehlszeilenargumenten aktivieren:
 +
@@ -86,14 +97,14 @@ EMAIL:
 
 [NOTE]
 ====
-Die folgenden drei Attribute können sowohl über Befehlszeilenargumente als auch über die Datei config.yaml konfiguriert werden; die übrigen Attribute sind nur in der Datei config.yaml konfigurierbar:
+Die folgenden drei Attribute lassen sich über Befehlszeilenargumente oder die Datei config.yaml konfigurieren. Alle übrigen Attribute sind ausschließlich in der Datei config.yaml konfigurierbar:
 
 * E-Mail-fähig
 * E-Mail-Empfänger
 * E-Mail-Berichtsformate
 
 
-Beachten Sie, dass, wenn Befehlszeilenargumente angegeben werden, diese die Werte in der config.yaml-Datei überschreiben.
+Zu beachten ist, dass Befehlszeilenargumente die Werte der Datei config.yaml überschreiben.
 
 Beispiel:
 
