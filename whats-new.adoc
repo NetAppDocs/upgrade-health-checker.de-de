@@ -22,11 +22,14 @@ Erfahren Sie mehr über die Neuerungen im Upgrade Health Checker (UHC). Weitere 
 
 Dieses Update beinhaltet zahlreiche Verbesserungen, darunter ein Dashboard zur Flottenrisikoanalyse, Unterstützung für E-Mail-Authentifizierung und -Verschlüsselung, Berichte zur Laufwerksanzahl, Unterstützung für empfohlene ONTAP-Versionen sowie IMT-Prüfungen für NAS und SAN.
 
-* UHC Dashboard: *Fleet Risk*-Ansicht jetzt verfügbar
-* E-Mail Integration: Unterstützung für einen E-Mail Server mit Authentifizierung und Verschlüsselung
-* *Laufwerksanzahl* in der Clusterübersicht im Bericht hinzugefügt
-* Empfohlene ONTAP Version jetzt unterstützt
-* Unterstützung für NAS und SAN IMT-Prüfungen hinzugefügt
+* Bietet Unterstützung für einen E-Mail-Server mit Authentifizierung und Verschlüsselung.
++
+link:setup-email-upgrade-health-checker.html["Erhalten Sie Upgrade Health Checker-Berichte per E-Mail"].
+
+* Beinhaltet ein Dashboard zur Flottenrisikoanalyse, das Ihr gesamtes Netzwerk nach Risiken einstuft. Es ist jetzt ersichtlich, welche blockierten Cluster das höchste Risiko bergen. Dadurch lässt sich die Behebung priorisieren.
+* Der Clusterbericht enthält nun neben ONTAP Version, der Knotenanzahl und der Kapazität auch die Anzahl der Laufwerke. Damit ist die Hardware-Snapshot für Upgrade- und Kapazitätsplanung vollständig.
+* Die UHC-Bewertung beinhaltet nun die empfohlene ONTAP-Zielversion für das Upgrade.
+* Unterstützung für NAS und SAN IMT-Prüfungen wurde hinzugefügt.
 
 
 
