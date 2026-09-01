@@ -4,7 +4,7 @@ permalink: generate-report-upgrade-health-checker.html
 keywords: upgrade, health, checker, report 
 summary: Sie können den Upgrade Health Checker verwenden, um einen Upgrade-Plan für einen oder mehrere ONTAP Cluster zu erstellen. 
 ---
-= Upgrade-Plan mit Upgrade Health Checker generieren
+= Erstellen Sie einen Upgrade-Plan mit dem Upgrade Health Checker
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
