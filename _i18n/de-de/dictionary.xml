@@ -300,7 +300,6 @@
   <block id="f46e85a0de52240f550f9daab9d6086c" category="list-text">E-Mail-Empfänger</block>
   <block id="ea263adf46b6d5e874d790afd83f0987" category="list-text">E-Mail-Berichtsformate</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Beispiel:</block>
-  <block id="1cc4274eac4a90919037379ad302ee24" category="summary">Fehlerbehebung beim Upgrade Health Checker: Häufige Probleme, Fehler und Lösungen für ONTAP Upgrades.</block>
   <block id="33fc1d20f1d2e7e8d9ea39cc1c1e260b" category="doc">Fehlerbehebung beim Upgrade-Integritätscheck</block>
   <block id="8bbf781921fc79273f7113760a28cdce" category="paragraph">Erfahren Sie, wie Sie häufig auftretende Probleme mit dem Upgrade Health Checker beheben und Fehler beseitigen, die die ONTAP-Upgrade-Planung blockieren können.</block>
   <block id="7a4e5e5bc542eae2d10e3506f839f2ae" category="section-title">Fehlerbehebung bei Problemen</block>
@@ -402,4 +401,5 @@
   <block id="d37632fbc2f0f1b27ade5808d2dec434" category="doc">Rechtliche Hinweise für Upgrade Health Checker</block>
   <block id="58ce19f9d14bbf36c99916598d07b7c7" category="cell">Die VM sollte an einem Standort mit Clusteranbindung und Internetzugang platziert werden, damit automatische Tool-Updates möglich sind. Die Maschine sollte über HTTPS (443) Zugriff auf die folgenden Endpunkte haben, um automatische Updates durchzuführen und NetApp den Empfang von AutoSupport Informationen zu Ihren Upgrade-Plänen zu ermöglichen: \https://support.netapp.com/ \https://api.uhc.netapp.com \https://gql.aiq.netapp.com \https://api.activeiq.netapp.com</block>
   <block id="f8dfac59d1fb625ac9d81d11aafbcd07" category="admonition">Es muss sichergestellt sein, dass die virtuelle Maschine über HTTPS (443) eine Verbindung zu den Endpunkten für automatische Updates und Telemetrie (\https://support.netapp.com/ und \https://api.activeiq.netapp.com) herstellen kann, damit NetApp AutoSupport Informationen zu Ihren Upgrade-Plänen erhalten kann. Falls kein Internetzugang verfügbar ist, muss die neueste Version von Upgrade Health Checker manuell heruntergeladen werden.</block>
+  <block id="7b109a0da4b947e1ef4b1af915317559" category="summary">Fehlerbehebung beim Upgrade Health Checker durch Prüfung häufiger Probleme, Fehler und Lösungen für ONTAP Upgrades.</block>
 </blocks>
